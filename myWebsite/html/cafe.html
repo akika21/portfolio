@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>akika's website</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="stylesheet" href="../css/drawer.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="hamburger" id="open_nav">
+            <img src="../image/hamburger.png" alt="">
+        </div>
+        <h1 class="site-title">recommend cafeteria</h1>
+    </header>
+    <section class="cafe">
+        <h2 class="heading">My favorite cafe</h2>
+
+
+        <div class="cafe-wrapper">
+            <div class="center">
+                <div>
+                    <img src="../image/k-k1.jpg" id="bigimg">
+                </div>
+                <ul class="photos">
+                    <li id="cafe1"><img src="../image/k-k1.jpg" class="k" data-image="../image/k-k1.jpg"></li>
+                    <li><img src="../image/k-k2.jpg" class="k" data-image="../image/k-k2.jpg"></li>
+                    <li><img src="../image/k-k3.jpg" class="k" data-image="../image/k-k3.jpg"></li>
+                    <li><img src="../image/k-k4.jpg" class="k" data-image="../image/k-k4.jpg"></li>
+                </ul>
+            </div>
+            <h3><br>1. KURUMED COFFEE</h3>
+            <br>
+            <p>西国分寺</p><br><br><br><br><br>
+
+            <div class="center">
+                <div>
+                    <img src="../image/n-n1.jpg" id="bigimg2">
+                </div>
+                <ul class="photos">
+                    <li id="cafe2"><img src="../image/n-n1.jpg" class="n" data-image="../image/n-n1.jpg"></li>
+                    <li><img src="../image/n-n2.jpg" class="n" data-image="../image/n-n2.jpg"></li>
+                    <li><img src="../image/n-n3.jpg" class="n" data-image="../image/n-n3.jpg"></li>
+                    <li><img src="../image/n-n4.jpg" class="n" data-image="../image/n-n4.jpg"></li>
+                </ul>
+            </div>
+            <h3><br>2. No.4</h3>
+            <br>
+            <p>市ヶ谷</p><br><br><br><br><br>
+
+            <div class="center">
+                <div>
+                    <img src="../image/e-e1.jpg" id="bigimg3">
+                </div>
+                <ul class="photos">
+                    <li id="cafe3"><img src="../image/e-e1.jpg" class="e" data-image="../image/e-e1.jpg"></li>
+                    <li><img src="../image/e-e2.jpg" class="e" data-image="../image/e-e2.jpg"></li>
+                    <li><img src="../image/e-e3.jpg" class="e" data-image="../image/e-e3.jpg"></li>
+                    <li><img src="../image/e-e4.jpg" class="e" data-image="../image/e-e4.jpg"></li>
+                </ul>
+            </div>
+            <h3><br>3. engawa</h3>
+            <br>
+            <p>葉山</p><br><br><br><br><br>
+        </div>
+        <div class="buttons">
+            <a class="button" href="../index.html">BACK</a>
+        </div>
+    </section>
+    <footer class="footer">
+        &copy; akika's website
+    </footer>
+    <nav id="nav">
+        <div class="logo"><img src="" alt=""></div>
+        <ul>
+            <li><a class="sidemenu" href="#cafe1">KURUMED COFFEE</a></li>
+            <li><a class="sidemenu" href="#cafe2">No.4</a></li>
+            <li><a class="sidemenu" href="#cafe3">engawa</a></li>
+        </ul>
+    </nav>
+    <script>
+        'use strict';
+
+        const k = document.querySelectorAll('.k');
+        k.forEach(function (item, index) {
+            item.onclick = function () {
+                document.getElementById('bigimg').src = this.dataset.image;
+            }
+        });
+
+        const n = document.querySelectorAll('.n');
+        n.forEach(function (item, index) {
+            item.onclick = function () {
+                document.getElementById('bigimg2').src = this.dataset.image;
+            }
+        });
+
+        const e = document.querySelectorAll('.e');
+        e.forEach(function (item, index) {
+            item.onclick = function () {
+                document.getElementById('bigimg3').src = this.dataset.image;
+            }
+        });
+    </script>
+<script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+        'use strict';
+
+        $(document).ready(function () {
+            $('#open_nav').on('click', function () {
+                $('#wrapper, #nav').toggleClass('show');
+            });
+            $('.sidemenu').on('click', function () {
+                $('#wrapper, #nav').toggleClass('show');
+            });
+        });
+    </script>
+</body>
+
+</html>

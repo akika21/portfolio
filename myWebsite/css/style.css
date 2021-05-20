@@ -1,0 +1,245 @@
+@charset "UTF-8";
+
+html {
+    font-size: 62.5%;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    background: rgb(24, 68, 109) url('../image/back.jpg') no-repeat fixed left bottom;
+    background-size: cover;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: 'Caveat', cursive, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+.header {
+    padding: 170px 30px 80px;
+}
+.site-title-sub {
+    margin: 0 0 30px;
+    letter-spacing: 1px;
+    font-size: 2.2rem;
+}
+.site-title-sub::before,
+.site-title-sub::after {
+    content:'';
+    display: inline-block;
+    width: 140px;
+    height: 2px;
+    margin: 0 30px;
+    background-color: rgb(21, 21, 22);
+    vertical-align: middle;
+}
+.site-title {
+    margin: 50px 0 40px;
+    font-size: 7.6rem;
+}
+.site-description {
+    margin-bottom: 120px;
+    color: rgb(82, 84, 131);
+    font-size: 1.6rem;
+}
+.button {
+    display: inline-block;
+    width: 200px;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: #6b93c0;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}
+.button:hover {
+    opacity: 0.9;
+}
+.button-showy {
+    background-color: #1682c0;
+}
+.buttons .button {
+    margin: 10px;
+}
+.background {
+    padding: 80px 30px;
+    background-color: rgb(24, 68, 109);
+    color: azure;
+}
+.heading {
+    position: relative;
+    display: inline-block;
+    margin: 30px 0 15px;
+    padding-bottom: 15px;
+    letter-spacing: 1px;
+    font-size: 4rem;
+}
+.heading::before,
+.heading::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid azure;
+}
+.background-text {
+    margin: 30px 0;
+    line-height: 2.5;
+}
+.fav {
+    background-color: #fdfcf4;
+    padding: 170px 0;
+}
+.fav-wrapper {
+    display: table;
+    width: 100%;
+    margin-top: 100px;
+    table-layout: fixed;
+}
+.fav-box {
+    position: relative;
+    display:table-cell;
+}
+.fav-box::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.2;
+    transform: scalY(-1);
+    
+}
+.fav-image {
+    display: block;
+    width: 100%;
+    margin: 0 0 75%;
+}
+.fav-description {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 50%;
+    overflow-y: auto;
+}
+.fav-description-inner {
+    display: table;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+.fav-text {
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 2;
+}
+.fav-text .button {
+    width: 60%;
+    margin-top: 20px;
+    padding: 3px;
+}
+.button-ghost {
+    border: 1px solid #fff;
+    background-color: rgb(24, 68, 109);
+}
+.fav-box.trip::after {
+    background-image: url(../image/trip.jpg);
+}
+.fav-box.cafe::after {
+    background-image: url(../image/cafe.jpg);
+}
+.fav-box.live::after {
+    background-image: url(../image/live.jpg);
+}
+.fav-box.walk::after {
+    background-image: url(../image/walk.jpg);
+}
+.fav-box:nth-last-child(odd) .fav-image {
+    margin: 60% 0 0;
+}
+.fav-box:nth-last-child(odd) .fav-description,
+.fav-box:nth-last-child(odd)::after {
+    top: 0;
+}
+.skills {
+    padding: 170px 0;
+    background-color: rgb(24, 68, 109);
+    color: azure
+}
+.skills-wrapper {
+    display: table;
+    width: 80%;
+    margin: 50px auto 0;
+    margin-top: 100px;
+    table-layout: fixed;
+}
+.skill-box {
+    display: table-cell;
+}
+.fas {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 30px;
+    border: 4px solid;
+    border-radius: 50%;
+    color: azure;
+    font-size: 8rem;
+    line-height: 142px;
+}
+.skill-title {
+    margin: 0 20px 20px;
+    font-size: 2rem;
+}
+.skill-text {
+    margin: 20px;
+    line-height: 2;
+}
+.contact {
+    padding: 170px 0 150px;
+}
+.contact-form {
+    width: 50%;
+    margin: 50px auto 0;
+}
+.contact-form input[type=text],
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid rgb(255, 244, 240, 0.4);
+    border-radius: 0;
+    background-color: rgb(255, 244, 240, 0.5);
+
+}
+.contact textarea {
+    height: 150px;
+}
+.contact-form input[type=submit] {
+    display: block;
+    width: 200px;
+    margin: 40px auto 0;
+    padding: 15px;
+
+    border: 1px solid rgb(24, 68, 109);
+    border-radius: 5px;
+    background-color: transparent;
+    color: rgb(24, 68, 109, 0.6);
+    cursor: pointer;
+}
+.contact-form input[type=submit]:hover {
+    background-color: rgb(24, 68, 109, 0.05);
+}
+.footer {
+    padding: 12px 0;
+    font-size: 1.3rem;
+}
+.contact-check {
+    background-color: #fdfcf4;
+    font-size: 2rem;
+}
